@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casamento Suzarino & Ivete</title>
+<style>
+:root{--gold:#b89454;--ink:#4d4035;--cream:#f7f0e5;--wine:#7d1e2b}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,#eee3d2,#fbf8f1);font-family:Georgia,serif;color:var(--ink)}
+main{max-width:760px;margin:auto;padding:22px 15px 50px}
+.panel{background:#fffdf9;border:1px solid #d9c49c;border-radius:18px;padding:24px;box-shadow:0 12px 35px #57452a18;margin:16px 0}
+.kicker{text-transform:uppercase;letter-spacing:3px;color:var(--gold);font:12px Arial,sans-serif;text-align:center}
+h1{text-align:center;font-size:clamp(34px,8vw,58px);font-weight:normal;margin:12px 0;color:#8b6b3e}
+h2{text-align:center;font-weight:normal;color:#8b6b3e}
+.names{text-align:center;font-size:25px;margin:12px 0}.date{text-align:center;font-size:19px;letter-spacing:2px}
+.envelope{max-width:520px;margin:22px auto;text-align:center;cursor:pointer;position:relative;padding:42px 20px;background:linear-gradient(145deg,#fffaf0,#eadcc5);border:2px solid #d2b77f;border-radius:8px;box-shadow:0 14px 30px #604b2b24}
+.envelope:before{content:"";position:absolute;inset:0;background:linear-gradient(32deg,transparent 49.5%,#d8c29d 50%,transparent 50.6%),linear-gradient(-32deg,transparent 49.5%,#d8c29d 50%,transparent 50.6%);opacity:.45;pointer-events:none}
+.seal{position:relative;display:grid;place-items:center;margin:15px auto 0;width:76px;height:76px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#b84c55,var(--wine) 65%,#4f1019);color:#f4dca5;border:3px solid #d8b76f;box-shadow:0 4px 9px #4b101a55;font-size:22px}
+#invitation{display:none}.details{text-align:center;line-height:1.65}.event{padding:14px 0;border-bottom:1px solid #eadfc9}.event:last-child{border:0}
+a.btn,button{display:inline-block;border:0;border-radius:28px;padding:12px 19px;background:var(--gold);color:white;text-decoration:none;font: bold 14px Arial,sans-serif;margin:6px;cursor:pointer}
+a.secondary,button.secondary{background:#f1e8d9;color:#6b5638;border:1px solid #d6c39f}
+input,textarea,select{width:100%;padding:11px;margin:6px 0 13px;border:1px solid #d9c9ad;border-radius:8px;font:15px Arial}
+label{font:13px Arial,sans-serif;color:#655640}
+.tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+.tab{background:#eee4d5;color:#5c4b36}.tab.active{background:#8b6b3e;color:#fff}
+.hidden{display:none}.small{font:12px Arial,sans-serif;color:#82735f;text-align:center}
+table{width:100%;border-collapse:collapse;font:13px Arial,sans-serif}td,th{padding:9px;border-bottom:1px solid #eee2d0;text-align:left}
+@media(max-width:520px){.panel{padding:18px}.names{font-size:21px}}
+</style>
+</head>
+<body>
+<main>
+<div class="kicker">Com a bênção de Deus e das nossas famílias</div>
+<h1>Convite de Casamento</h1>
+<div class="names">Suzarino <span style="color:#b89454">&</span> Ivete</div>
+<div class="date">05 · DEZEMBRO · 2026</div>
+<div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Abrir convite">
+  <div class="kicker">Um convite especial</div>
+  <h2 style="margin-bottom:4px">Para celebrar o amor</h2>
+  <p>Toque no selo para abrir o nosso convite</p>
+  <div class="seal">S&I</div>
+</div>
+<section id="invitation" class="panel">
+  <div class="kicker">É com alegria que convidamos</div>
+  <h1 style="font-size:38px">Suzarino & Ivete</h1>
+  <p class="details">A partilhar connosco um dos dias mais importantes das nossas vidas. A vossa presença tornará este momento ainda mais especial.</p>
+  <h2>05 de Dezembro de 2026</h2>
+  <div class="event"><strong>Cerimónia Civil</strong><br>10h00 · Cartório da Cidade de Tete<br><a class="btn secondary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Cart%C3%B3rio+da+Cidade+de+Tete">Ver localização</a></div>
+  <div class="event"><strong>Cerimónia Religiosa</strong><br>13h00 · Igreja Tabernáculo Aliança da Fé, Moatize<br><a class="btn secondary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Igreja+Tabern%C3%A1culo+Alian%C3%A7a+da+F%C3%A9+Moatize">Ver localização</a></div>
+  <div class="event"><strong>Recepção</strong><br>17h00 · Salão Matema GPZ<br><a class="btn secondary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o+Matema+GPZ+Moatize">Ver localização</a></div>
+  <p class="details">“Assim, eles já não são dois, mas sim uma só carne.” — Mateus 19:6</p>
+  <div class="details"><a id="rsvp" class="btn" target="_blank" rel="noopener">Confirmar presença pelo WhatsApp</a></div>
+</section>
+<section class="panel">
+ <div class="tabs">
+  <button class="tab active" data-tab="personalizar">Personalizar convite</button>
+  <button class="tab" data-tab="gestao">Gestão de convidados</button>
+ </div>
+ <div id="personalizar">
+  <h2>Preparar convite individual</h2>
+  <label>Nome da pessoa ou família</label><input id="guest" placeholder="Ex.: Família João Manuel">
+  <label>Mensagem personalizada (opcional)</label><textarea id="message" rows="3" placeholder="Será uma alegria contar com a sua presença."></textarea>
+  <label>Cor do selo</label><select id="sealColor"><option value="#7d1e2b">Bordô</option><option value="#9b7540">Dourado</option><option value="#263e50">Azul-marinho</option></select>
+  <button id="apply">Aplicar ao convite</button>
+  <button class="secondary" id="copy">Copiar link individual</button>
+  <p class="small">O link inclui o nome e a mensagem para partilhar com cada convidado.</p>
+ </div>
+ <div id="gestao" class="hidden">
+  <h2>Lista de convidados</h2>
+  <p class="small">Registe manualmente as respostas recebidas neste dispositivo.</p>
+  <label>Convidado / família</label><input id="newGuest" placeholder="Nome do convidado">
+  <label>Estado da resposta</label><select id="status"><option>Sem resposta</option><option>Confirmou</option><option>Não poderá comparecer</option></select>
+  <button id="add">Adicionar / actualizar</button>
+  <div id="counts" class="details"></div><div style="overflow-x:auto"><table><thead><tr><th>Convidado</th><th>Estado</th></tr></thead><tbody id="rows"></tbody></table></div>
+  <button class="secondary" id="csv">Exportar lista CSV</button>
+  <p class="small">A lista fica guardada apenas no navegador deste aparelho; não é sincronizada entre telemóveis.</p>
+ </div>
+</section>
+<p class="small">Com carinho, Suzarino & Ivete · 2026</p>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const params=new URLSearchParams(location.search);
+const guestName=params.get('convidado')||'';
+const guestMessage=params.get('mensagem')||'';
+$('guest').value=guestName;$('message').value=guestMessage;
+function setRSVP(){let n=$('guest').value.trim()||'Convidado';let msg=`Olá! Sou ${n}. Gostaria de responder ao convite de casamento de Suzarino e Ivete, no dia 5 de Dezembro de 2026. A minha resposta é: `;$('rsvp').href='https://wa.me/258872424747?text='+encodeURIComponent(msg)}
+function openInvite(){ $('invitation').style.display='block'; $('envelope').style.display='none';setRSVP();$('invitation').scrollIntoView({behavior:'smooth'});}
+$('envelope').addEventListener('click',openInvite);$('envelope').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openInvite();}});
+$('apply').onclick=()=>{let n=$('guest').value.trim();let m=$('message').value.trim();$('envelope').querySelector('p').textContent=n?`Com carinho, ${n}`:'Toque no selo para abrir o nosso convite';$('sealColor').style.color='white';document.querySelector('.seal').style.background=$('sealColor').value;setRSVP();if(m){$('invitation').querySelector('.details').textContent=m;}};
+$('copy').onclick=async()=>{let u=new URL(location.href);u.searchParams.set('convidado',$('guest').value.trim());u.searchParams.set('mensagem',$('message').value.trim());try{await navigator.clipboard.writeText(u.toString());alert('Link copiado!');}catch(e){prompt('Copie o link:',u.toString());}};
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');$('personalizar').classList.toggle('hidden',b.dataset.tab!=='personalizar');$('gestao').classList.toggle('hidden',b.dataset.tab!=='gestao');});
+let guests=JSON.parse(localStorage.getItem('weddingGuests')||'[]');
+function render(){let c={'Confirmou':0,'Não poderá comparecer':0,'Sem resposta':0};guests.forEach(g=>c[g.status]++);$('counts').innerHTML=`<p>Confirmaram: <b>${c['Confirmou']}</b> · Não poderão: <b>${c['Não poderá comparecer']}</b> · Sem resposta: <b>${c['Sem resposta']}</b></p>`;$('rows').innerHTML='';guests.forEach(g=>{let tr=document.createElement('tr');let a=document.createElement('td'),b=document.createElement('td');a.textContent=g.name;b.textContent=g.status;tr.append(a,b);$('rows').append(tr);});localStorage.setItem('weddingGuests',JSON.stringify(guests));}
+$('add').onclick=()=>{let n=$('newGuest').value.trim();if(!n)return;let s=$('status').value;let i=guests.findIndex(g=>g.name.toLowerCase()===n.toLowerCase());if(i>=0)guests[i].status=s;else guests.push({name:n,status:s});$('newGuest').value='';render();};
+$('csv').onclick=()=>{let data='Convidado,Estado\n'+guests.map(g=>'"'+g.name.replaceAll('"','""')+'","'+g.status+'"').join('\n');let a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['\ufeff'+data],{type:'text/csv;charset=utf-8'}));a.download='confirmacoes-casamento.csv';a.click();URL.revokeObjectURL(a.href);};
+render();setRSVP();
+</script>
+</body></html>
